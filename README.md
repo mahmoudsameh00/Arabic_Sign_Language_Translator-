@@ -117,7 +117,8 @@ Use the included tool to record new signs via your webcam.
 1.  Open `notebooks/collecting_data.ipynb`.
 2.  Update the `actions` list with the new word(s) (e.g., `actions = np.array(['Hello'])`).
 3.  Run the script. It will record **30 sequences** per action and automatically generate **flipped augmentations**, effectively doubling your dataset size.
-**we trained our model on a large dataset of
+   
+**We trained our model on a large dataset of
 video recordings featuring people gesturing 100
 various words which consist of 300 videos in each
 word and each video is labeled with its
