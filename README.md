@@ -6,9 +6,6 @@
 ![Gemini AI](https://img.shields.io/badge/Google%20Gemini-Powered-purple)
 
 This project bridges the communication gap for the Arabic-speaking Deaf community by translating Sign Language into fluent text in real-time. Unlike standard translators that map gestures to static words, this system understands context.
-[cite_start]This project bridges the communication gap for the Arabic-speaking Deaf community by translating Sign Language into fluent text in real-time[cite: 11, 12]. [cite_start]While traditional systems often struggle with the nuance between static and dynamic signs, this system implements a **dual-methodology approach** to ensure high accuracy across the board.
-
-[cite_start]It leverages **MediaPipe** for robust feature extraction and utilizes two distinct deep learning models: **MLP (Multi-layer Perceptron)** for static characters and **Stacked LSTM** for dynamic words[cite: 16, 17]. Beyond recognition, the system integrates **Gender Detection** and **Google Gemini AI** to construct grammatically correct Arabic sentences, solving complex conjugation issues inherent to the language
 
 It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from MediaPipe hand landmarks. Unique to this project, it incorporates a Gender Detection module (OpenCV/Caffe) to ensure correct Arabic verb conjugation (e.g., distinguishing between "أنا ذاهبه" and "أنا ذاهب"). Finally, the disjointed words are processed by Google Gemini AI to generate grammatically perfect Arabic sentences, handling complex sentence structures that simple dictionary lookups cannot.
 
@@ -25,7 +22,7 @@ It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from M
 1.  **Data Collection Pipeline:**
     * **Capture:** The system includes a dedicated tool (`collecting_data.ipynb`) that accesses the webcam to record custom datasets. It captures **30 videos** per sign, with each video containing **30 frames** of motion.
     * **Feature Extraction:** For every frame, **MediaPipe** extracts 84 distinct keypoints (x, y coordinates) from both hands, converting raw pixels into structured numerical data.
-    * **Augmentation:** To double the dataset size and improve model robustness, the system automatically generates flipped versions of every recorded sequence, ensuring the model learns to recognize signs from slightly different perspectives.
+    * **Optimization:** To reduce computational cost and latency, the system subsamples the input to **15 frames** per sequence before training. This effectively captures the full temporal dynamics of the gesture while halving the processing load.
 
 2.  **Building the Model (Deep Learning):**
     * **Architecture:** The core is a custom **Stacked LSTM (Long Short-Term Memory)** neural network, specifically chosen for its ability to learn patterns in time-series data (motion over time).
@@ -36,7 +33,7 @@ It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from M
         * **Classification:** Fully connected Dense layers reduce the data dimensionality, ending in a Softmax layer that outputs probabilities across 100+ different sign classes.
 
 3.  **Real-Time Detection:**
-    * **Inference Loop:** The application runs at ~15 FPS, continuously filling a sliding buffer with the last 30 frames of hand keypoints.
+    * **Inference Loop:** The application runs at ~15 FPS, continuously filling a sliding buffer. It processes the last 15 frames of keypoints to make a prediction.
     * **Prediction & Gating:** The LSTM model predicts the current sign based on this buffer. A prediction is only accepted as valid if the confidence score exceeds **95%** (Threshold), effectively filtering out noise and idle movements.
     * **Asynchronous Grammar Correction:**
         * **Optimistic UI:** The recognized raw word (e.g., "eat") appears on screen immediately for instant feedback.
