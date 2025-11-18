@@ -32,7 +32,7 @@ It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from M
         * **Regularization:** Dropout layers (0.4, 0.2) and L2 kernel regularization are embedded to prevent overfitting on the training data.
         * **Classification:** Fully connected Dense layers reduce the data dimensionality, ending in a Softmax layer that outputs probabilities across 100+ different sign classes.
 
-3.  **Real-Time Detection & Mechanism:**
+3.  **Real-Time Detection:**
     * **Inference Loop:** The application runs at ~15 FPS, continuously filling a sliding buffer with the last 30 frames of hand keypoints.
     * **Prediction & Gating:** The LSTM model predicts the current sign based on this buffer. A prediction is only accepted as valid if the confidence score exceeds **95%** (Threshold), effectively filtering out noise and idle movements.
     * **Asynchronous Grammar Correction:**
