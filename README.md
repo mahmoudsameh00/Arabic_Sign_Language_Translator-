@@ -76,3 +76,36 @@ Arabic-Sign-Language-Translator/
 ├── requirements.txt         # Python dependencies
 ├── .env                     # API Keys
 └── README.md                # Project Documentation
+
+
+```
+## 🚀 Installation
+
+1.  **Clone the repo:**
+```bash
+git clone [https://github.com/mahmoudsameh00/Arabic_Sign_Language_Translator-.git](https://github.com/mahmoudsameh00/Arabic_Sign_Language_Translator-.git)
+cd sign-language-translator
+ ```
+
+2.  **Install dependencies:**
+ ```bash
+ pip install -r requirements.txt
+ ```
+
+3.  **Setup API Key:**
+ * Create a .env file and add your Google Gemini API key:
+     ```Ini, TOML
+     GOOGLE_API_KEY=your_gemini_api_key_here
+     ```
+
+4.  **Run the Translator:**
+ ```bash
+ python app.py
+ ```
+* q: Quit the application.
+* c: Clear the current sentence.
+
+## 🤝 Acknowledgements
+* [MediaPipe](https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker): For efficient on-device hand tracking.
+* [Google Gemini](https://ai.google.dev/): For advanced linguistic processing.
+* [OpenCV](https://opencv.org/): For computer vision tasks.
