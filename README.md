@@ -6,6 +6,9 @@
 ![Gemini AI](https://img.shields.io/badge/Google%20Gemini-Powered-purple)
 
 This project bridges the communication gap for the Arabic-speaking Deaf community by translating Sign Language into fluent text in real-time. Unlike standard translators that map gestures to static words, this system understands context.
+[cite_start]This project bridges the communication gap for the Arabic-speaking Deaf community by translating Sign Language into fluent text in real-time[cite: 11, 12]. [cite_start]While traditional systems often struggle with the nuance between static and dynamic signs, this system implements a **dual-methodology approach** to ensure high accuracy across the board.
+
+[cite_start]It leverages **MediaPipe** for robust feature extraction and utilizes two distinct deep learning models: **MLP (Multi-layer Perceptron)** for static characters and **Stacked LSTM** for dynamic words[cite: 16, 17]. Beyond recognition, the system integrates **Gender Detection** and **Google Gemini AI** to construct grammatically correct Arabic sentences, solving complex conjugation issues inherent to the language
 
 It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from MediaPipe hand landmarks. Unique to this project, it incorporates a Gender Detection module (OpenCV/Caffe) to ensure correct Arabic verb conjugation (e.g., distinguishing between "أنا ذاهبه" and "أنا ذاهب"). Finally, the disjointed words are processed by Google Gemini AI to generate grammatically perfect Arabic sentences, handling complex sentence structures that simple dictionary lookups cannot.
 
