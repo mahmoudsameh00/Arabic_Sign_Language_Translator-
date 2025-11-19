@@ -37,7 +37,7 @@ It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from M
     * **Prediction & Gating:** The LSTM model predicts the current sign based on this buffer. A prediction is only accepted as valid if the confidence score exceeds **95%** (Threshold), effectively filtering out noise and idle movements.
     * **Asynchronous Grammar Correction:**
         * **Optimistic UI:** The recognized raw word (e.g., "eat") appears on screen immediately for instant feedback.
-        * **Contextual Refinement:** A background thread simultaneously sends the accumulated words and the user's gender (detected via OpenCV) to **Google Gemini**. The LLM returns a grammatically correct Arabic sentence (e.g., converting "eat" to "I am eating" based on gender contexts), which seamlessly updates the display without causing video lag.
+        * **Contextual Refinement:** A background thread simultaneously sends the accumulated words and the user's gender (detected via OpenCV) to **Qwen**. The LLM returns a grammatically correct Arabic sentence (e.g., converting "eat" to "I am eating" based on gender contexts), which seamlessly updates the display without causing video lag.
 
 
 
