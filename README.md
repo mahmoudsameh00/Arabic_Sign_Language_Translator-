@@ -15,7 +15,7 @@ It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from M
 * * **Deep Learning:** A custom **Stacked LSTM** model trained on 100+ Arabic Sign Language words.
 * **Real-Time Detection:** Uses **MediaPipe** to track 84 hand keypoints at 15 FPS.
 * **Gender Awareness:** Integrated **OpenCV Face Detection** determines if the signer is Male or Female to apply correct Arabic verb conjugation (e.g., "يأكل" vs "تأكل").
-* **AI Grammar Correction:** Utilizes **Google Gemini 2.0 Flash-lite** to convert disjointed words (e.g., "I school go") into grammatically perfect Arabic sentences (e.g., "أنا أذهب إلى المدرسة").
+* **AI Grammar Correction:** Utilizes **Qwen2.5-1.5B-Instruct-GGUF** to convert disjointed words (e.g., "I school go") into grammatically perfect Arabic sentences (e.g., "أنا أذهب إلى المدرسة").
 
 ## 🛠️ Architecture
 
