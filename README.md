@@ -65,7 +65,6 @@ Arabic-Sign-Language-Translator/
 │   └── Word_real_time.ipynb # Inference experiments
 │
 ├── src/                     # Source code package
-│   ├── __init__.py
 │   ├── config.py            # Configuration (mappings, paths, constants)
 │   ├── keypoints.py         # MediaPipe and extraction logic
 │   ├── model_def.py         # Neural Network Architecture definition
@@ -76,7 +75,6 @@ Arabic-Sign-Language-Translator/
 ├── app.py                   # Script to launch real-time inference
 ├── Arial.ttf                # Required font for rendering Arabic text
 ├── requirements.txt         # Python dependencies
-├── .env                     # API Keys
 └── README.md                # Project Documentation
 
 
