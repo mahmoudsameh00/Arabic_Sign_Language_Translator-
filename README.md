@@ -3,11 +3,11 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-Enabled-green)
-![Gemini AI](https://img.shields.io/badge/Google%20Gemini-Powered-purple)
+![Qwen AI](https://img.shields.io/badge/Qwen%202.5-Powered-violet)
 
 This project bridges the communication gap for the Arabic-speaking Deaf community by translating Sign Language into fluent text in real-time. Unlike standard translators that map gestures to static words, this system understands context.
 
-It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from MediaPipe hand landmarks. Unique to this project, it incorporates a Gender Detection module (OpenCV/Caffe) to ensure correct Arabic verb conjugation (e.g., distinguishing between "أنا ذاهبه" and "أنا ذاهب"). Finally, the disjointed words are processed by Qwen (AliBaba) AI to generate grammatically perfect Arabic sentences, handling complex sentence structures that simple dictionary lookups cannot.
+It utilizes a Stacked LSTM neural network to recognize 100+ dynamic signs from MediaPipe hand landmarks. Unique to this project, it incorporates a Gender Detection module (OpenCV/Caffe) to ensure correct Arabic verb conjugation (e.g., distinguishing between "أنا ذاهبه" and "أنا ذاهب"). Finally, the disjointed words are processed by Qwen 2.5 (Alibaba Cloud) to generate grammatically perfect Arabic sentences, handling complex sentence structures that simple dictionary lookups cannot.
 
 ## 🌟 Key Features
 
