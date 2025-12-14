@@ -73,7 +73,8 @@ Arabic-Sign-Language-Translator/
 ├── train.py                 # Script to launch training
 ├── app.py                   # Script to launch real-time inference
 ├── Arial.ttf                # Required font for rendering Arabic text
-├── requirements.txt         # Python dependencies
+├── requirements.txt         # Python dependencies (pip)
+├── environment.yml          # Conda environment configuration
 └── README.md                # Project Documentation
 
 
