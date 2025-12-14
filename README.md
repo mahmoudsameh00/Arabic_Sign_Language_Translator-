@@ -83,7 +83,6 @@ Arabic-Sign-Language-Translator/
 
 1.  **Prerequisites:**
 
-*Python 3.11 (TensorFlow and MediaPipe compatibility).*
 
 *C++ Compiler (Required for compiling llama-cpp-python):*
    * Windows: Install Visual Studio Community with "Desktop development with C++".
